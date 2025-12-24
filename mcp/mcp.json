@@ -1,0 +1,14 @@
+{
+  "name": "brave-search",
+  "version": "1.0.0",
+  "description": "Brave Search API for LM Studio",
+  "servers": {
+    "brave": {
+      "type": "openapi",
+      "url": "https://raw.githubusercontent.com/Smokyr/brave-search/main/mcp/openapi.yaml",
+      "auth": {
+        "type": "bearer"
+      }
+    }
+  }
+}
