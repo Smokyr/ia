@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: Brave Search API
+  version: 1.0.0
+servers:
+  - url: https://api.search.brave.com
+paths:
+  /res/v1/web/search:
+    get:
+      summary: Search the web using Brave Search
+      operationId: searchWeb
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query
+        - name: count
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Number of results (default 10)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
